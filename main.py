@@ -51,6 +51,7 @@ logging.basicConfig(level=logging.INFO)
 NONOWORDS = [base64.b64decode(i).decode("utf-8") for i in ["bmlja2E=", "bmlja2Vy", "bmlnYQ==", "bmlnZ2E=", "bmlnZ2Vy"]]
 
 type_dict = {
+    "Regular": 1500,
     "Fine": 1000,
     "Nice": 750,
     "Good": 500,
@@ -63,6 +64,8 @@ type_dict = {
     "Rickroll": 125,
     "Reverse": 100,
     "Superior": 80,
+    "Coward": 70,
+    "Katari": 60 # KAT ari
     "Trash": 50,
     "Legendary": 35,
     "Mythic": 25,
@@ -70,9 +73,17 @@ type_dict = {
     "Corrupt": 15,
     "Professor": 10,
     "Divine": 8,
+    "Total": 7,
+    "Sandpile": 6
     "Real": 5,
+    "Best": 4,
     "Ultimate": 3,
     "eGirl": 2,
+    "Unreal": 1,
+    "Glitched": 0.5,
+    "Impossible": 0.01,
+    "Amazing": 0.005,
+    "Fantastic": 0.001,
 }
 
 # create a huge list where each cat type is multipled the needed amount of times
@@ -91,6 +102,7 @@ for i in type_dict.keys():
     allowedemojis.append(i.lower() + "cat")
 
 pack_data = [
+    {"name": "Dirt", "value": 19, "upgrade": 30, "totalvalue": 19},
     {"name": "Wooden", "value": 65, "upgrade": 30, "totalvalue": 75},
     {"name": "Stone", "value": 90, "upgrade": 30, "totalvalue": 100},
     {"name": "Bronze", "value": 100, "upgrade": 30, "totalvalue": 130},
@@ -99,6 +111,7 @@ pack_data = [
     {"name": "Platinum", "value": 630, "upgrade": 30, "totalvalue": 800},
     {"name": "Diamond", "value": 860, "upgrade": 30, "totalvalue": 1200},
     {"name": "Celestial", "value": 2000, "upgrade": 0, "totalvalue": 2000},  # is that a madeline celeste reference????
+    {"name": "Mega", "value": 4000, "upgrade": 0, "totalvalue": 4000},
 ]
 
 prism_names_start = [
@@ -128,6 +141,7 @@ prism_names_start = [
     "X-ray",
     "Yankee",
     "Zulu",
+    "Mixa",
 ]
 prism_names_end = [
     "",
@@ -159,23 +173,23 @@ for i in prism_names_end:
 vote_button_texts = [
     "You havent voted today!",
     "I know you havent voted ;)",
-    "If vote cat will you friend :)",
-    "Vote cat for president",
+    "If vote kat will you friend :)",
+    "Vote kat for president",
     "vote = 0.01% to escape basement",
     "vote vote vote vote vote",
     "mrrp mrrow go and vote now",
     "if you vote you'll be free (no)",
     "vote. btw, i have a pipebomb",
     "No votes? :megamind:",
-    "Cat says you should vote",
-    "cat will be happy if you vote",
+    "Kat says you should vote",
+    "Kat will be happy if you vote",
     "VOTE NOW!!!!!",
     "I voted and got 1000000$",
     "I voted and found a gf",
     "lebron james forgot to vote",
     "vote if you like cats",
-    "vote if cats > dogs",
-    "you should vote for cat NOW!",
+    "vote if Kats > Togs",
+    "you should vote for kat NOW!",
 ]
 
 # various hints/fun facts
@@ -208,7 +222,7 @@ hints = [
     "Cat Bot can go offline! Don't panic if it does",
     "By default, cats spawn 2-20 minutes apart",
     "View the last catch as well as the next one with /last",
-    "Make sure to leave Cat Bot [a review on top.gg](<https://top.gg/bot/966695034340663367#reviews>)!",
+    "Make sure to leave Catari Bot [a review on top.gg](<https://top.gg/bot/966695034340663367#reviews>)!",
 ]
 
 # laod the jsons
@@ -228,30 +242,23 @@ bot = commands.AutoShardedBot(
 )
 
 funny = [
-    "why did you click this this arent yours",
-    "absolutely not",
-    "cat bot not responding, try again later",
-    "you cant",
-    "can you please stop",
-    "try again",
-    "403 not allowed",
-    "stop",
-    "get a life",
-    "not for you",
-    "no",
-    "nuh uh",
-    "access denied",
-    "forbidden",
-    "don't do this",
-    "cease",
-    "wrong",
-    "aw dangit",
-    "why don't you press buttons from your commands",
-    "you're only making me angrier",
+    "
+___________________________________________\n
+FATAL ERROR in\n
+action number 1\n
+of  Step Event\n
+for object object0:\n
+\n
+COMPILATION ERROR in code action\n
+Error in code at line 1:\n
+   no, don't\n
+    ^\n
+at position 3: Assignment operator expected.
+"
 ]
 
 # rain shill message for footers
-rain_shill = "☔ Get tons of cats /rain"
+rain_shill = "☔ Get tons of cars /rain"
 
 # timeout for views
 # higher one means buttons work for longer but uses more ram to keep track of them
